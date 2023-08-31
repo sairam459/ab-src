@@ -1,0 +1,64 @@
+.skeleton-para {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skeleton-para-line::before {
+    content: '';
+    position: absolute;
+    background-color: #CDCDCD;
+    height: 10px;
+    width: 100%;
+    border-radius: 8px;
+    animation: skeleton 1s infinite linear;
+}
+
+.skeleton-image {
+    height: inherit;
+    width: inherit;
+    position: relative;
+}
+
+.skeleton-image::before {
+    content: '';
+    position: absolute;
+    background-color: #CDCDCD;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    animation: skeleton 1s infinite;
+}
+
+@keyframes skeleton {
+    0% {
+        opacity: .6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .6;
+    }
+}
+
+.skeleton {
+    height: inherit;
+    width: inherit;
+    position: relative;
+}
+
+.skeleton::before {
+    content: '';
+    position: absolute;
+    background-color: #CDCDCD;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    animation: skeleton 1s infinite;
+}
