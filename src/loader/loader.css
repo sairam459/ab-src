@@ -10,11 +10,10 @@
 .skeleton-para-line::before {
     content: '';
     position: absolute;
-    background-color: #CDCDCD;
     height: 10px;
     width: 100%;
     border-radius: 8px;
-    animation: skeleton 1s infinite linear;
+    animation: skeleton 1s linear infinite alternate;
 }
 
 .skeleton-image {
@@ -26,25 +25,19 @@
 .skeleton-image::before {
     content: '';
     position: absolute;
-    background-color: #CDCDCD;
     height: 100%;
     width: 100%;
     border-radius: 4px;
-    animation: skeleton 1s infinite;
+    animation: skeleton 1s linear infinite alternate;
 }
 
 @keyframes skeleton {
     0% {
-        opacity: .6;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: .6;
-    }
+        background-color: hsl(200, 20%, 80%);
+      }
+      100% {
+        background-color: hsl(200, 20%, 95%);
+      }
 }
 
 .skeleton {
@@ -56,9 +49,8 @@
 .skeleton::before {
     content: '';
     position: absolute;
-    background-color: #CDCDCD;
     height: 100%;
     width: 100%;
     border-radius: 4px;
-    animation: skeleton 1s infinite;
+    animation: skeleton 1s linear infinite alternate;
 }
